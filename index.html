@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1: Signup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Signup today - Get Free Gifts!</h1>
+        <div class="signup__wrapper">
+            <form id="signupForm">
+                <div class="step__wrapper">
+                    <div class="step active">1</div>
+                    <div class="step">2</div>
+                    <div class="step">3</div>
+                </div>
+
+                <div class="tab mb-5">
+                    <div class="input-group mb-3 border-bottom">
+                        <label for="yourName" class="input-group-text labelStyle">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </label>
+                        <input type="text" id="yourName" name="yourName" placeholder="Your name..."
+                            class="form-control inputStyle">
+                    </div>
+                    <div class="input-group mb-3 border-bottom">
+                        <label for="yourEmail" class="input-group-text labelStyle">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </label>
+                        <input type="email" name="yourEmail" id="yourEmail" placeholder="Your email"
+                            class="form-control inputStyle">
+                    </div>
+                </div>
+                <div class="tab mb-5">
+                    <div class="input-group mb-3 border-bottom">
+                        <label for="yourPhone" class="input-group-text labelStyle">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </label>
+                        <input type="number" minlength="10" maxlength="10" name="yourPhone" id="yourPhone"
+                            placeholder="Your phone..." class="form-control inputStyle">
+                    </div>
+                    <div class="input-group mb-3 border-bottom">
+                        <label for="yourBirthday" class="input-group-text labelStyle">
+                            <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        </label>
+                        <input type="date" name="yourBirthday" id="yourBirthday" placeholder="Your birthday..."
+                            class="form-control inputStyle">
+                    </div>
+                </div>
+                <div class="tab mb-5">
+                    <div class="input-group mb-3 border-bottom">
+                        <select name="chooseSelect" class="form-select" aria-label="Default select" id="chooseSelect">
+                            <option value="" selected>Choose your subject</option>
+                            <option value="books">Get Free Books</option>
+                            <option value="clothes">Get Free Clothes</option>
+                            <option value="voucher">Get Free Vouchers</option>
+                        </select>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 50px"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                    </div>
+                </div>
+                <div class="button__group mb-5">
+                    <button type="button" class="btn btn-lg btn__groupStyle" id="prevBtn">
+                        <ion-icon name="chevron-back-outline"></ion-icon> Previous
+                    </button>
+                    <button type="button" class="btn btn-lg btn__groupStyle" id="nextBtn">Next <ion-icon
+                            name="chevron-forward-outline"></ion-icon></button>
+                    <button type="button" class="btn btn-lg btn__groupStyle" id="confirm" data-bs-toggle="modal"
+                        data-bs-target="#confirmSignup">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal finish-->
+    <div class="modal fade" id="confirmSignup" tabindex="-1" aria-labelledby="confirmSignup" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="/img/thank-you.jpeg" alt="Event" class="w-100">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
+</body>
+
+</html>
